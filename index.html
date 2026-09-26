@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crispy Crown — មាន់បំពងស្រួយ ឆ្ងាញ់ ក្តៅៗ បញ្ជាទិញតាមអនឡាញ។">
+  <link rel="icon" href="mascot-badge.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Kantumruy+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Crispy Crown — មាន់បំពងស្រួយឆ្ងាញ់</title>
+</head>
+<body data-page="home">
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="index.html"><img src="mascot-badge.svg" alt="Crispy Crown"></a>
+    <button class="burger" aria-label="បើកម៉ឺនុយ" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" aria-label="ម៉ឺនុយមេ">
+      <ul class="nav__list">
+        <li><a class="nav__link" data-nav="home" href="index.html">ទំព័រដើម</a></li>
+        <li><a class="nav__link" data-nav="menu" href="menu.html">ម៉ឺនុយ</a></li>
+        <li><a class="nav__link" data-nav="deals" href="deals.html">ការផ្តល់ជូន</a></li>
+        <li><a class="nav__link" data-nav="about" href="about.html">អំពីយើង</a></li>
+        <li><a class="nav__link" data-nav="locations" href="locations.html">សាខា</a></li>
+        <li><a class="nav__link" data-nav="contact" href="contact.html">ទំនាក់ទំនង</a></li>
+      </ul>
+    </nav>
+    <div class="header__actions">
+      <a class="cart-btn" href="cart.html">🛒 កន្ត្រក <span class="cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <div>
+        <span class="hero__eyebrow reveal">ចម្អិនថ្មីៗរាល់ ៣០ នាទី</span>
+        <h1 class="reveal">មាន់បំពងស្រួយ<br>រសជាតិពិសេស</h1>
+        <p class="reveal">គ្រឿងទេស ១១ មុខ លាយដោយដៃ ជ្រលក់ម្សៅពិសេស រួចបំពងក្នុងប្រេងស្អាត។ បញ្ជាទិញឥឡូវនេះ ដឹកជញ្ជូនក្នុងរយៈពេល ៣០ នាទី។</p>
+        <p class="reveal">
+          <a class="btn btn--primary" href="menu.html">បញ្ជាទិញឥឡូវនេះ</a>
+          <a class="btn btn--ghost" href="deals.html" style="color:#FBF3E4;border-color:#FBF3E4">មើលការផ្តល់ជូន</a>
+        </p>
+        <div class="hero__stats">
+          <div><b>12</b><span>សាខាក្នុងភ្នំពេញ</span></div>
+          <div><b>30mn/1h</b><span>ដឹកជញ្ជូនរហ័ស</span></div>
+          <div><b>4.8★</b><span>ការវាយតម្លៃអតិថិជន</span></div>
+        </div>
+      </div>
+      <img class="hero__art" src="mascot-badge.svg" alt="ធុងមាន់បំពង Crispy Crown" width="420" height="380">
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="features">
+        <div class="feature"><div class="ico">🔥</div><h3>ក្តៅៗពីឆ្នាំង</h3><p>យើងមិនរក្សាទុកមាន់លើសពី ៣០ នាទីឡើយ។</p></div>
+        <div class="feature"><div class="ico">🛵</div><h3>ដឹកជញ្ជូន ៣០ នាទី</h3><p>ឥតគិតថ្លៃដឹក ពេលកម្មង់លើស $20។</p></div>
+        <div class="feature"><div class="ico">🌿</div><h3>គ្មានសារធាតុពណ៌</h3><p>ប្រើមាន់ស្រស់ និងគ្រឿងទេសធម្មជាតិ។</p></div>
+        <div class="feature"><div class="ico">💳</div><h3>បង់ប្រាក់ងាយ</h3><p>សាច់ប្រាក់ ABA ឬ KHQR តាមចិត្ត។</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>មុខម្ហូបពេញនិយម</h2>
+        <p>ម្ហូបដែលអតិថិជនកម្មង់ច្រើនជាងគេក្នុងសប្តាហ៍នេះ។</p>
+      </div>
+      <div class="products" id="featured-products"></div>
+      <p style="margin-top:28px"><a class="btn btn--dark" href="menu.html">មើលម៉ឺនុយទាំងអស់</a></p>
+    </div>
+  </section>
+
+  <section class="section section--teal">
+    <div class="wrap center">
+      <h2>ឈុតគ្រួសារធំ សម្រាប់ ៤-៥ នាក់</h2>
+      <p class="lead">មាន់ ៨ដុំ ដំឡូងបំពងធំ ២ និងភេសជ្ជៈ ៤ ក្នុងតម្លៃតែ $18.90។</p>
+      <p style="margin-top:20px"><a class="btn btn--primary" href="menu.html?cat=combo">មើលឈុតគ្រួសារ</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <img src="mascot-badge.svg" alt="Crispy Crown" style="height:44px;background:#FBF3E4;border-radius:10px;padding:4px">
+      <p style="margin-top:12px;color:#D9CFC0;font-size:.92rem">មាន់បំពងគ្រឿងទេសដើម ចម្អិនថ្មីៗរាល់ ៣០ នាទី នៅគ្រប់សាខារបស់យើង។</p>
+    </div>
+    <div>
+      <h4>ម៉ឺនុយ</h4>
+      <ul>
+        <li><a href="menu.html?cat=chicken">មាន់បំពង</a></li>
+        <li><a href="menu.html?cat=burger">ប៊ឺហ្គឺ</a></li>
+        <li><a href="menu.html?cat=combo">ឈុតគ្រួសារ</a></li>
+        <li><a href="menu.html?cat=drinks">ភេសជ្ជៈ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>ក្រុមហ៊ុន</h4>
+      <ul>
+        <li><a href="about.html">អំពីយើង</a></li>
+        <li><a href="locations.html">សាខា</a></li>
+        <li><a href="deals.html">ការផ្តល់ជូន</a></li>
+        <li><a href="contact.html">ទំនាក់ទំនង</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>ទទួលដំណឹងពិសេស</h4>
+      <p style="color:#D9CFC0;font-size:.92rem">បញ្ចូលអ៊ីមែល ដើម្បីទទួលកូដបញ្ចុះតម្លៃ។</p>
+      <form class="newsletter" onsubmit="event.preventDefault(); this.reset(); toast(&apos;អរគុណ! អ្នកបានជាវរួចរាល់&apos;);">
+        <input type="email" placeholder="you@email.com" required aria-label="អ៊ីមែល">
+        <button class="btn btn--primary" type="submit">ជាវ</button>
+      </form>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    © <span id="year"></span> Crispy Crown — គម្រោងសិក្សា (Student Project).🍗
+  </div>
+</footer>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

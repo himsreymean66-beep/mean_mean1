@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crispy Crown — មាន់បំពងស្រួយ ឆ្ងាញ់ ក្តៅៗ បញ្ជាទិញតាមអនឡាញ។">
+  <link rel="icon" href="mascot-badge.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Kantumruy+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>កន្ត្រក — Crispy Crown</title>
+</head>
+<body data-page="cart">
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="index.html"><img src="mascot-badge.svg" alt="Crispy Crown"></a>
+    <button class="burger" aria-label="បើកម៉ឺនុយ" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" aria-label="ម៉ឺនុយមេ">
+      <ul class="nav__list">
+        <li><a class="nav__link" data-nav="home" href="index.html">ទំព័រដើម</a></li>
+        <li><a class="nav__link" data-nav="menu" href="menu.html">ម៉ឺនុយ</a></li>
+        <li><a class="nav__link" data-nav="deals" href="deals.html">ការផ្តល់ជូន</a></li>
+        <li><a class="nav__link" data-nav="about" href="about.html">អំពីយើង</a></li>
+        <li><a class="nav__link" data-nav="locations" href="locations.html">សាខា</a></li>
+        <li><a class="nav__link" data-nav="contact" href="contact.html">ទំនាក់ទំនង</a></li>
+      </ul>
+    </nav>
+    <div class="header__actions">
+      <a class="cart-btn" href="cart.html">🛒 កន្ត្រក <span class="cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="banner">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">ទំព័រដើម</a> / កន្ត្រក</p>
+      <h1>កន្ត្រករបស់អ្នក</h1>
+      <p>ពិនិត្យទំនិញ និងបរិមាណ មុននឹងបង់ប្រាក់។</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap cart-layout">
+      <div>
+        <div class="cart-list" id="cart-list"></div>
+        <p style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn--ghost" href="menu.html">← បន្តជ្រើសរើស</a>
+          <button class="btn btn--ghost" id="clear-cart">សម្អាតកន្ត្រក</button>
+        </p>
+      </div>
+
+      <aside class="summary">
+        <h2 style="margin-bottom:10px">សរុបការកម្មង់</h2>
+        <div class="summary__row"><span>ចំនួនមុខម្ហូប</span><span id="sum-count">0 មុខ</span></div>
+        <div class="summary__row"><span>តម្លៃទំនិញ</span><span id="sum-subtotal">$0.00</span></div>
+        <div class="summary__row"><span>ថ្លៃដឹកជញ្ជូន</span><span id="sum-delivery">$0.00</span></div>
+        <div class="summary__row"><span>អាករ (១០%)</span><span id="sum-vat">$0.00</span></div>
+        <div class="summary__row summary__row--total"><span>សរុប</span><span id="sum-total">$0.00</span></div>
+        <p style="margin-top:16px"><a class="btn btn--primary btn--block" id="to-checkout" href="checkout.html">បន្តទៅការបង់ប្រាក់</a></p>
+        <p class="lead" style="font-size:.85rem;margin-top:10px">ដឹកជញ្ជូនឥតគិតថ្លៃ ពេលកម្មង់លើស $20។</p>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <img src="mascot-badge.svg" alt="Crispy Crown" style="height:44px;background:#FBF3E4;border-radius:10px;padding:4px">
+      <p style="margin-top:12px;color:#D9CFC0;font-size:.92rem">មាន់បំពងគ្រឿងទេសដើម ចម្អិនថ្មីៗរាល់ ៣០ នាទី នៅគ្រប់សាខារបស់យើង។</p>
+    </div>
+    <div>
+      <h4>ម៉ឺនុយ</h4>
+      <ul>
+        <li><a href="menu.html?cat=chicken">មាន់បំពង</a></li>
+        <li><a href="menu.html?cat=burger">ប៊ឺហ្គឺ</a></li>
+        <li><a href="menu.html?cat=combo">ឈុតគ្រួសារ</a></li>
+        <li><a href="menu.html?cat=drinks">ភេសជ្ជៈ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>ក្រុមហ៊ុន</h4>
+      <ul>
+        <li><a href="about.html">អំពីយើង</a></li>
+        <li><a href="locations.html">សាខា</a></li>
+        <li><a href="deals.html">ការផ្តល់ជូន</a></li>
+        <li><a href="contact.html">ទំនាក់ទំនង</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>ទទួលដំណឹងពិសេស</h4>
+      <p style="color:#D9CFC0;font-size:.92rem">បញ្ចូលអ៊ីមែល ដើម្បីទទួលកូដបញ្ចុះតម្លៃ។</p>
+      <form class="newsletter" onsubmit="event.preventDefault(); this.reset(); toast(&apos;អរគុណ! អ្នកបានជាវរួចរាល់&apos;);">
+        <input type="email" placeholder="you@email.com" required aria-label="អ៊ីមែល">
+        <button class="btn btn--primary" type="submit">ជាវ</button>
+      </form>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    © <span id="year"></span> Crispy Crown — គម្រោងសិក្សា (Student Project).🍗
+  </div>
+</footer>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crispy Crown — មាន់បំពងស្រួយ ឆ្ងាញ់ ក្តៅៗ បញ្ជាទិញតាមអនឡាញ។">
+  <link rel="icon" href="mascot-badge.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Kantumruy+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>ទំនាក់ទំនង — Crispy Crown</title>
+</head>
+<body data-page="contact">
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="index.html"><img src="mascot-badge.svg" alt="Crispy Crown"></a>
+    <button class="burger" aria-label="បើកម៉ឺនុយ" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" aria-label="ម៉ឺនុយមេ">
+      <ul class="nav__list">
+        <li><a class="nav__link" data-nav="home" href="index.html">ទំព័រដើម</a></li>
+        <li><a class="nav__link" data-nav="menu" href="menu.html">ម៉ឺនុយ</a></li>
+        <li><a class="nav__link" data-nav="deals" href="deals.html">ការផ្តល់ជូន</a></li>
+        <li><a class="nav__link" data-nav="about" href="about.html">អំពីយើង</a></li>
+        <li><a class="nav__link" data-nav="locations" href="locations.html">សាខា</a></li>
+        <li><a class="nav__link" data-nav="contact" href="contact.html">ទំនាក់ទំនង</a></li>
+      </ul>
+    </nav>
+    <div class="header__actions">
+      <div class="notif" id="notif-wrap">
+        <button class="notif-btn" id="notif-toggle" aria-haspopup="true" aria-expanded="false" aria-label="ការជូនដំណឹង">
+          🔔<span class="notif-count" id="notif-count" hidden>0</span>
+        </button>
+        <div class="notif-panel" id="notif-panel" hidden>
+          <div class="notif-head">
+            <h3>ការជូនដំណឹង</h3>
+            <button type="button" id="notif-clear">សម្អាតទាំងអស់</button>
+          </div>
+          <div class="notif-list" id="notif-list"></div>
+        </div>
+      </div>
+      <a class="cart-btn" href="cart.html">🛒 កន្ត្រក <span class="cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="banner">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">ទំព័រដើម</a> / ទំនាក់ទំនង</p>
+      <h1>ទំនាក់ទំនងយើង</h1>
+      <p>មានសំណួរ ឬយោបល់? យើងចង់ស្តាប់ពីអ្នក។</p>
+      <span class="status-chip" id="live-status"><span class="led"></span><span id="live-status-text">កំពុងពិនិត្យម៉ោងបើក…</span></span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap" style="display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:start">
+      <div class="summary" style="position:static">
+        <h2 style="margin-bottom:14px">ផ្ញើសារមកយើង</h2>
+        <p id="contact-success" hidden style="background:#E6F3EC;border:2px solid #124B46;border-radius:12px;padding:12px;margin-bottom:14px">✅ សាររបស់អ្នកត្រូវបានផ្ញើ។ យើងនឹងឆ្លើយតបក្នុងរយៈពេល ២៤ ម៉ោង។</p>
+        <form class="form" id="contact-form" novalidate>
+          <div class="row-2">
+            <div class="field">
+              <label for="name">ឈ្មោះពេញ</label>
+              <input type="text" id="name" name="name" required placeholder="សុខ ដារា">
+              <span class="error"></span>
+            </div>
+            <div class="field">
+              <label for="phone">លេខទូរស័ព្ទ</label>
+              <input type="tel" id="phone" name="phone" required placeholder="012345678">
+              <span class="error"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">អ៊ីមែល</label>
+            <input type="email" id="email" name="email" required placeholder="you@email.com">
+            <span class="error"></span>
+          </div>
+          <div class="field">
+            <label for="topic">ប្រធានបទ</label>
+            <select id="topic" name="topic" required>
+              <option value="">— ជ្រើសរើស —</option>
+              <option>យោបល់អំពីម្ហូប</option>
+              <option>បញ្ហាការកម្មង់</option>
+              <option>ការងារ</option>
+              <option>ផ្សេងៗ</option>
+            </select>
+            <span class="error"></span>
+          </div>
+          <div class="field">
+            <label for="message">សារ</label>
+            <textarea id="message" name="message" rows="5" required placeholder="សរសេរសាររបស់អ្នកនៅទីនេះ…"></textarea>
+            <span class="error"></span>
+          </div>
+          <button class="btn btn--primary btn--block" type="submit">ផ្ញើសារ</button>
+        </form>
+
+        <p style="margin-top:16px;font-weight:600">សំណួរលឿន៖</p>
+        <div class="quick-chips" id="quick-chips">
+          <button type="button" data-topic="បញ្ហាការកម្មង់" data-msg="ការកម្មង់របស់ខ្ញុំមកយឺត សូមជួយពិនិត្យ។">📦 កម្មង់មកយឺត</button>
+          <button type="button" data-topic="បញ្ហាការកម្មង់" data-msg="ខ្ញុំចង់លុបចោលការកម្មង់របស់ខ្ញុំ។">❌ លុបចោលការកម្មង់</button>
+          <button type="button" data-topic="យោបល់អំពីម្ហូប" data-msg="ខ្ញុំមានយោបល់អំពីរសជាតិម្ហូប។">💬 ផ្តល់យោបល់</button>
+          <button type="button" data-topic="ការងារ" data-msg="ខ្ញុំចង់ដាក់ពាក្យសុំធ្វើការនៅ Crispy Crown។">💼 សុំធ្វើការ</button>
+        </div>
+      </div>
+
+      <aside class="loc">
+        <h3>ព័ត៌មានទំនាក់ទំនង</h3>
+        <ul>
+          <li>☎️ ០២៣ ៩០០ ១០០ (ម៉ោង ៨:០០–២១:០០)</li>
+          <li>✉️ Mr.yummy@crispycrown.example</li>
+          <li>📍 ការិយាល័យកណ្តាល៖ ផ្លូវ ៣១៥ ភ្នំពេញ</li>
+          <li>💬 Telegram: @crispycrown</li>
+        </ul>
+        <h3 style="margin-top:18px">សំណួរញឹកញាប់</h3>
+        <div class="faq-acc">
+          <details open>
+            <summary>ដឹកជញ្ជូនយូរប៉ុនណា?</summary>
+            <p>ជាមធ្យមប្រមាណ ៣០ នាទី អាស្រ័យលើចម្ងាយ និងស្ថានភាពចរាចរណ៍។</p>
+          </details>
+          <details>
+            <summary>មានម្ហូបបួសទេ?</summary>
+            <p>មាន! ដំឡូងបំពង សាឡាត់ស្ពៃក្ដោប និងភេសជ្ជៈគ្រប់មុខ សុទ្ធតែជាបួស។</p>
+          </details>
+          <details>
+            <summary>បង់ប្រាក់បែបណា?</summary>
+            <p>អាចបង់ជាសាច់ប្រាក់ពេលទទួល ឬតាម ABA Pay និង KHQR។</p>
+          </details>
+          <details>
+            <summary>តើអាចលុបចោលការកម្មង់បានទេ?</summary>
+            <p>អាចលុបចោលបាន ប្រសិនបើម្ហូបមិនទាន់ចាប់ផ្តើមចម្អិន។ សូមទូរស័ព្ទមកលេខខាងលើភ្លាមៗ។</p>
+          </details>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <img src="mascot-badge.svg" alt="Crispy Crown" style="height:44px;background:#FBF3E4;border-radius:10px;padding:4px">
+      <p style="margin-top:12px;color:#D9CFC0;font-size:.92rem">មាន់បំពងគ្រឿងទេសដើម ចម្អិនថ្មីៗរាល់ ៣០ នាទី នៅគ្រប់សាខារបស់យើង។</p>
+    </div>
+    <div>
+      <h4>ម៉ឺនុយ</h4>
+      <ul>
+        <li><a href="menu.html?cat=chicken">មាន់បំពង</a></li>
+        <li><a href="menu.html?cat=burger">ប៊ឺហ្គឺ</a></li>
+        <li><a href="menu.html?cat=combo">ឈុតគ្រួសារ</a></li>
+        <li><a href="menu.html?cat=drinks">ភេសជ្ជៈ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>ក្រុមហ៊ុន</h4>
+      <ul>
+        <li><a href="about.html">អំពីយើង</a></li>
+        <li><a href="locations.html">សាខា</a></li>
+        <li><a href="deals.html">ការផ្តល់ជូន</a></li>
+        <li><a href="contact.html">ទំនាក់ទំនង</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>ទទួលដំណឹងពិសេស</h4>
+      <p style="color:#D9CFC0;font-size:.92rem">បញ្ចូលអ៊ីមែល ដើម្បីទទួលកូដបញ្ចុះតម្លៃ។</p>
+      <form class="newsletter" onsubmit="event.preventDefault(); this.reset(); toast(&apos;អរគុណ! អ្នកបានជាវរួចរាល់&apos;);">
+        <input type="email" placeholder="you@email.com" required aria-label="អ៊ីមែល">
+        <button class="btn btn--primary" type="submit">ជាវ</button>
+      </form>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    © <span id="year"></span> Crispy Crown — គម្រោងសិក្សា (Student Project).🍗
+  </div>
+</footer>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

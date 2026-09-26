@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crispy Crown — មាន់បំពងស្រួយ ឆ្ងាញ់ ក្តៅៗ បញ្ជាទិញតាមអនឡាញ។">
+  <link rel="icon" href="mascot-badge.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Kantumruy+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>បង់ប្រាក់ — Crispy Crown</title>
+</head>
+<body data-page="checkout">
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="index.html"><img src="mascot-badge.svg" alt="Crispy Crown"></a>
+    <button class="burger" aria-label="បើកម៉ឺនុយ" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" aria-label="ម៉ឺនុយមេ">
+      <ul class="nav__list">
+        <li><a class="nav__link" data-nav="home" href="index.html">ទំព័រដើម</a></li>
+        <li><a class="nav__link" data-nav="menu" href="menu.html">ម៉ឺនុយ</a></li>
+        <li><a class="nav__link" data-nav="deals" href="deals.html">ការផ្តល់ជូន</a></li>
+        <li><a class="nav__link" data-nav="about" href="about.html">អំពីយើង</a></li>
+        <li><a class="nav__link" data-nav="locations" href="locations.html">សាខា</a></li>
+        <li><a class="nav__link" data-nav="contact" href="contact.html">ទំនាក់ទំនង</a></li>
+      </ul>
+    </nav>
+    <div class="header__actions">
+      <a class="cart-btn" href="cart.html">🛒 កន្ត្រក <span class="cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="banner">
+    <div class="wrap">
+      <p class="crumb"><a href="cart.html">កន្ត្រក</a> / បង់ប្រាក់</p>
+      <h1>ការបង់ប្រាក់</h1>
+      <p>បំពេញព័ត៌មានដឹកជញ្ជូន ដើម្បីបញ្ចប់ការកម្មង់។</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap cart-layout" id="checkout-main">
+      <div class="summary" style="position:static">
+        <h2 style="margin-bottom:14px">ព័ត៌មានអតិថិជន</h2>
+        <form class="form" id="checkout-form" novalidate>
+          <div class="row-2">
+            <div class="field">
+              <label for="name">ឈ្មោះពេញ *</label>
+              <input type="text" id="name" name="name" required placeholder="សុខ ដារា">
+              <span class="error"></span>
+            </div>
+            <div class="field">
+              <label for="phone">លេខទូរស័ព្ទ *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="012345678">
+              <span class="error"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">អ៊ីមែល *</label>
+            <input type="email" id="email" name="email" required placeholder="you@email.com">
+            <span class="error"></span>
+          </div>
+
+          <div class="field">
+            <label for="address">អាសយដ្ឋានដឹកជញ្ជូន *</label>
+            <textarea id="address" name="address" rows="3" required placeholder="ផ្ទះលេខ, ផ្លូវ, សង្កាត់, ខណ្ឌ"></textarea>
+            <span class="error"></span>
+          </div>
+
+          <div class="row-2">
+            <div class="field">
+              <label for="branch">សាខាដែលចង់កម្មង់ *</label>
+              <select id="branch" name="branch" required>
+                <option value="">— ជ្រើសរើស —</option>
+                <option>ទួលគោក</option>
+                <option>បឹងកេងកង</option>
+                <option>ចំការមន</option>
+                <option>សែនសុខ</option>
+              </select>
+              <span class="error"></span>
+            </div>
+            <div class="field">
+              <label for="time">ពេលវេលាដឹកជញ្ជូន *</label>
+              <select id="time" name="time" required>
+                <option value="">— ជ្រើសរើស —</option>
+                <option>ឆាប់តាមដែលអាចធ្វើបាន</option>
+                <option>ក្នុងរយៈពេល ១ ម៉ោង</option>
+                <option>ពេលល្ងាច (១៨:០០–២០:០០)</option>
+              </select>
+              <span class="error"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>វិធីបង់ប្រាក់ *</label>
+            <div class="pay-options">
+              <label class="pay-option"><input type="radio" name="payment" value="សាច់ប្រាក់ពេលទទួល" checked> <span>💵 សាច់ប្រាក់ពេលទទួល</span></label>
+              <label class="pay-option"><input type="radio" name="payment" value="ABA Pay"> <span>🏦 ABA Pay</span></label>
+              <label class="pay-option"><input type="radio" name="payment" value="KHQR"> <span>📱 KHQR</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="note">ចំណាំបន្ថែម (ស្រេចចិត្ត)</label>
+            <input type="text" id="note" name="note" placeholder="ឧ. សូមកុំដាក់ម្ទេស">
+            <span class="error"></span>
+          </div>
+
+          <button class="btn btn--primary btn--block" type="submit">បញ្ជាក់ការកម្មង់</button>
+        </form>
+      </div>
+
+      <aside class="summary">
+        <h2 style="margin-bottom:10px">សង្ខេបការកម្មង់</h2>
+        <div id="checkout-items"></div>
+        <div class="summary__row" style="border-top:2px dashed var(--line);margin-top:8px;padding-top:12px"><span>តម្លៃទំនិញ</span><span id="sum-subtotal">$0.00</span></div>
+        <div class="summary__row"><span>ថ្លៃដឹកជញ្ជូន</span><span id="sum-delivery">$0.00</span></div>
+        <div class="summary__row"><span>អាករ (១០%)</span><span id="sum-vat">$0.00</span></div>
+        <div class="summary__row summary__row--total"><span>សរុប</span><span id="sum-total">$0.00</span></div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<div class="modal" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="ok-title">
+  <div class="modal__box">
+    <div class="check">✓</div>
+    <h2 id="ok-title">ការកម្មង់ជោគជ័យ!</h2>
+    <p style="margin:10px auto">អរគុណ <b id="order-name"></b>! លេខការកម្មង់របស់អ្នកគឺ <span class="order-id" id="order-id"></span></p>
+    <p>ចំនួនទឹកប្រាក់សរុប៖ <b id="order-total"></b></p>
+    <p style="margin-top:8px" class="lead">យើងនឹងទូរស័ព្ទទៅអ្នកដើម្បីបញ្ជាក់ក្នុងរយៈពេល ៥ នាទី។</p>
+    <p style="margin-top:18px;display:flex;gap:10px;justify-content:center">
+      <a class="btn btn--primary" href="index.html">ត្រឡប់ទៅទំព័រដើម</a>
+      <a class="btn btn--ghost" href="menu.html">កម្មង់បន្ថែម</a>
+    </p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <img src="mascot-badge.svg" alt="Crispy Crown" style="height:44px;background:#FBF3E4;border-radius:10px;padding:4px">
+      <p style="margin-top:12px;color:#D9CFC0;font-size:.92rem">មាន់បំពងគ្រឿងទេសដើម ចម្អិនថ្មីៗរាល់ ៣០ នាទី នៅគ្រប់សាខារបស់យើង។</p>
+    </div>
+    <div>
+      <h4>ម៉ឺនុយ</h4>
+      <ul>
+        <li><a href="menu.html?cat=chicken">មាន់បំពង</a></li>
+        <li><a href="menu.html?cat=burger">ប៊ឺហ្គឺ</a></li>
+        <li><a href="menu.html?cat=combo">ឈុតគ្រួសារ</a></li>
+        <li><a href="menu.html?cat=drinks">ភេសជ្ជៈ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>ក្រុមហ៊ុន</h4>
+      <ul>
+        <li><a href="about.html">អំពីយើង</a></li>
+        <li><a href="locations.html">សាខា</a></li>
+        <li><a href="deals.html">ការផ្តល់ជូន</a></li>
+        <li><a href="contact.html">ទំនាក់ទំនង</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>ទទួលដំណឹងពិសេស</h4>
+      <p style="color:#D9CFC0;font-size:.92rem">បញ្ចូលអ៊ីមែល ដើម្បីទទួលកូដបញ្ចុះតម្លៃ។</p>
+      <form class="newsletter" onsubmit="event.preventDefault(); this.reset(); toast(&apos;អរគុណ! អ្នកបានជាវរួចរាល់&apos;);">
+        <input type="email" placeholder="you@email.com" required aria-label="អ៊ីមែល">
+        <button class="btn btn--primary" type="submit">ជាវ</button>
+      </form>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    © <span id="year"></span> Crispy Crown — គម្រោងសិក្សា (Student Project). 🍗
+  </div>
+</footer>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
